@@ -3562,6 +3562,13 @@ async function Generate(type, { automatic_trigger, force_name2, quiet_prompt, qu
         return Promise.resolve();
     }
 
+    let memoir_data = {
+            'memoir': {
+                'chat_id': getCurrentChatId()
+            }
+        };
+    generate_data = Object.assign(generate_data, memoir_data);
+
     async function finishGenerating() {
         if (power_user.console_log_prompts) {
             console.log(generate_data.prompt);
