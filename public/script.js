@@ -3564,7 +3564,8 @@ async function Generate(type, { automatic_trigger, force_name2, quiet_prompt, qu
 
     let memoir_data = {
             'memoir': {
-                'chat_id': getCurrentChatId()
+                'chat_id': getCurrentChatId(),
+                'instruct': power_user.instruct
             }
         };
     generate_data = Object.assign(generate_data, memoir_data);
