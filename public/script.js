@@ -3562,13 +3562,13 @@ async function Generate(type, { automatic_trigger, force_name2, quiet_prompt, qu
         return Promise.resolve();
     }
 
-    let memoir_data = {
-            'memoir': {
+    let grimoire_data = {
+            'grimoire': {
                 'chat_id': getCurrentChatId(),
                 'instruct': power_user.instruct
             }
         };
-    generate_data = Object.assign(generate_data, memoir_data);
+    generate_data = Object.assign(generate_data, grimoire_data);
 
     async function finishGenerating() {
         if (power_user.console_log_prompts) {
